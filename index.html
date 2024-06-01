@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <h1 id="pageHeader">NEWS NEWS NEWS</h1>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">newsApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <!-- dropdown instead -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Country
+                </a>
+                <ul class="dropdown-menu" id="country-dropdown"></ul>
+              </li>
+              <!-- end here -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" id="category-dropdown">
+                  <li><a class="dropdown-item" href="#" data-category="business">Business</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="entertainment">Entertainment</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="general">General</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="health">Health</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="science">Science</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="sports">Sports</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="technology">Technology</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div id="welcomeUser">
+        <h3 id="helloName"></h3>
+        <label for="userInputName">name pls: </label>
+        <input type="text" id="userInputName" placeholder="name here">
+        <button type="submit" id="submitNameBtn">ok</button>
+    </div>
+
+    <div class="container">
+        <div class="row content"></div>
+        <div class="d-flex justify-content-around my-4">
+            <button class="btn btn-primary" id="prevBtn"> &lt; Previous Page</button>
+            <button class="btn btn-primary" id="nextBtn">Next Page &gt; </button>
+        </div>
+    </div>
+    <div id="news-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
